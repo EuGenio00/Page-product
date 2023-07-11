@@ -8,7 +8,12 @@
   font-size: 62,5%;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
+
+/* li::marker{
+  font-size: 0;
+} */
 
 /* MOBILE FIRST */
 
@@ -42,14 +47,26 @@
   height: 18px;
 }
 
-.top-bar > ul {
+.lojas-parceiras{
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.lojas-parceiras > ul {
   width: 100%;
   height: 50px;
   align-items: center;
-  background-color: #000;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 0 16px;
+}
+
+.lojas-parceiras > ul li a{
+  display: flex;
+  align-items: center;
 }
 
 .header-mobile{
@@ -63,11 +80,12 @@
   width: 100%;
   background: #fff;
   border: 1px solid #e6e6e6;
-  border-radius: 4px;
+  border-radius: 2px;
   height: 40px;
 }
 
-.header-mobile input::placeholder{
+.header-mobile input::placeholder,
+.search-desktop > input::placeholder{
   padding-left: 20px;
   font-size: 14px;
   font-weight: 400;
@@ -89,6 +107,114 @@
   height: auto;
 }
 
+nav{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+nav img{
+  cursor: pointer;
+}
+
+.container-header{
+  width: 100%;
+  max-width: 1254px;
+}
+
+.header-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 10px;
+}
+
+.header-action-desktop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo-desktop {
+  width: 7%;
+}
+
+.search-desktop{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-desktop > input{
+  width: 100%;
+  max-width: 872px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  height: 40px;
+  padding: 11px 0 11px 20px;
+}
+
+.header-action-desktop{
+  width: 28%;
+}
+
+.header-action-desktop span,
+.header-action-desktop p{
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.minicart-desktop > a img,
+.login > a img,
+.wishlist > a img{
+  width: 24px;
+  height: 20px;
+}
+
+.wishlist a,
+.login a{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.wishlist > a span{
+  width: 45px;
+}
+
+.login span{
+  display: block;
+}
+
+nav ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li a{
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  height: 32px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav ul li a:hover{
+  color: #C3171D;
+}
+
 @media screen and (max-width: 992px) {
   nav {
     display: none;
@@ -100,7 +226,10 @@
   .ofertas > p {
     max-width: 100%;
   }
-  .lojas-parceiras{
+
+  .lojas-parceiras > ul{
+    max-width: 1254px;
+    width: 100%;
     gap: 30px;
     justify-content: flex-start !important;
   }
