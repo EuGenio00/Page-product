@@ -210,6 +210,7 @@ nav ul li a:hover{
 }
 
 footer{
+  width: 100%;
   margin-top: 60px;
 }
 
@@ -273,6 +274,13 @@ form input{
   border-bottom: 1px solid #fff;
 }
 
+form input::placeholder{
+  display: flex;
+  align-items: flex-end;
+  padding-top: 10px;
+  color: #fff;
+}
+
 form button{
   background-color: transparent;
   max-width: 211px;
@@ -284,6 +292,7 @@ form button{
   font-weight: 700;
   font-size: 14px;
   letter-spacing: .05em;
+  cursor: pointer;
 }
 
 .cookie-container {
@@ -340,8 +349,14 @@ form button{
   }
 
   form{
+    width: 100%;
     align-items: center;
     flex-direction: column;
+  }
+
+  form input{
+    width: 320px;
+    max-width: 320px;
   }
 
   .cookie{
